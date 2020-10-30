@@ -6,4 +6,4 @@ Created on Fri Oct 30 12:52:08 2020
 @author: advait_t
 """
 
-import prediction
+from prediction.prediction import prediction
