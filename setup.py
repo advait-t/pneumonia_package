@@ -5,26 +5,31 @@ Created on Thu Oct 29 15:54:21 2020
 
 @author: advait_t
 """
-
-import setuptools
-
-with open("readme.txt", "r") as fh:
-    long_description = fh.read()
-
-setuptools.setup(
-    name="pneumonia", # Replace with your own username
-    version="0.0.1",
-    author="Advait Thergaonkar, Jay Prajapati",
-    author_email="advait.thergaonkar@gmail.com , jayprajapati1141@gmail.com",
-    description="A package made to test X-Ray images to determine pneumonia",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/advait-t/pneumonia_package",
-    packages=setuptools.find_packages(),
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires='>=3.6',
+from distutils.core import setup
+setup(
+  name = 'pneumonia_pkg',         
+  packages = ['pneumonia_pkg'],   
+  version = '2.0',      
+  license='MIT',        
+  description = 'tool for detecting pneumonia',  
+  author = 'Advait Thergaonkar, Jay Prajapati',                   
+  author_email = 'advait.thergaonkar60@nmims.edu.in',     
+  url = 'https://github.com/advait-t/pneumonia_package', 
+  download_url = 'https://github.com/advait-t/pneumonia_package/archive/2.0.tar.gz',  
+  keywords = ['image', 'preprocessing', 'reshape','resize','background'],  
+  install_requires=[            
+          'validators',
+          'beautifulsoup4'
+          ,'numpy','pandas','opencv-python','matplotlib'
+      ],
+  classifiers=[
+    'Development Status :: 3 - Alpha',     
+    'Intended Audience :: Developers',     
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: MIT License', 
+    'Programming Language :: Python :: 3',    
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+  ],
 )
