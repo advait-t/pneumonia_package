@@ -6,4 +6,4 @@ Created on Fri Oct 30 12:52:08 2020
 @author: advait_t
 """
 
-from prediction.prediction import prediction
+from pneumonia_pkg.pneumonia_pkg import prediction
